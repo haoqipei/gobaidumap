@@ -30,8 +30,8 @@ func (bc *BaiduMapClient) SetAk(ak string) {
 func (bc *BaiduMapClient) GetAddressViaGEO(lat, lng string) (*StructGEOToAddress, error) {
 	res := new(StructGEOToAddress)
 
-	parameter := fmt.Sprintf("&location=%s,%s&output=json&pois=0", lat, lng)
-	reqURL := fmt.Sprintf("%s%s%s", reqURLForGEO, bc.GetAk(), parameter)
+	parameter := fmt.Sprintf("&output=json&coordtype=wgs84ll&location=%s,%s", lat, lng)
+	reqURL := fmt.Sprintf("%s%s%s", reqURLForReverseGEO, bc.GetAk(), parameter)
 
 	res2, err := requestBaidu("GetAddressViaGEO", reqURL)
 	if err != nil {

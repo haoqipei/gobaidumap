@@ -12,7 +12,9 @@ const (
 	defaultAppKey string = "F454f8a5efe5e577997931cc01de3974" // baidu's
 
 	// reqURLForGEO API URL for GetAddressViaGEO 通过 GEO 坐标信息获取地址
-	reqURLForGEO string = "http://api.map.baidu.com/geocoder/v2/?ak="
+	reqURLForGEO string = "http://api.map.baidu.com/geocoding/v3/?ak="
+
+	reqURLForReverseGEO string = "http://api.map.baidu.com/reverse_geocoding/v3/?ak="
 
 	// reqURLForIP API URL for GetAddressViaIP 通过 IP 获取地址
 	reqURLForIP string = "http://api.map.baidu.com/location/ip?ak="
